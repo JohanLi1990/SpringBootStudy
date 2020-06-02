@@ -35,6 +35,10 @@ private void setNotificaiton(NotificationService n){
 public theClassName className(Notification n){
     this.notif = n;
 }
-
-
 ```
+
+### 2.1. Application Properties and Application.yaml
+
++ Both can be used to configure values inside spring boot application.
++ use @Values("${variable name}") to define values.
++ ${} can be used as place holders too.
