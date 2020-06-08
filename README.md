@@ -42,3 +42,26 @@ public theClassName className(Notification n){
 + Both can be used to configure values inside spring boot application.
 + use @Values("${variable name}") to define values.
 + ${} can be used as place holders too.
+
+One can also use @Configuration Properties to give bunch of values to beans
+for example
+
+```java
+// Omitted
+
+@Component
+@ConfigurationProperties(prefix = "myappconfig")
+public class MyAppConfig {
+ private String firstname;
+ private String lastname;
+ private String emailAddress;
+
+// Omitted....
+//
+ @Override
+ public String toString() {
+  return "MyAppConfig [firstname=" + firstname + ", lastname=" + lastname + ", emailAddress=" + emailAddress + "]";
+ }
+}
+
+```
