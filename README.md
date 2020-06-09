@@ -65,3 +65,15 @@ public class MyAppConfig {
 }
 
 ```
+
+### 2.2. Auto Configuration
+
+@SpringBootApplication =  @EnableAutoConfiguration + @Configuration + @ComponentScan
+
+## 2. Spring Web Application
+
+Spring MVC patterns
+> we can load htmls, css, inside static folder
+> we can implement templates in template folder
+> rest controller always writes to the page
+> controller looks for the view to to return to page
