@@ -77,3 +77,9 @@ Spring MVC patterns
 > we can implement templates in template folder
 > rest controller always writes to the page
 > controller looks for the view to to return to page
+
+### 2.1 Static Contents
+
+do not put in the src/main/webapp folder, if you put it there, it cannot be built as jar
+
+easiest way is to use webjar dependencies from maven, and call bootstrap / jquery from html
