@@ -144,8 +144,39 @@ Flag model as JPA persistent, @Engtity
 > we can use annotations to create table in the database straightaway (via hibernate)
 > we cab do CRUD, use **crud repository** interface
 
-### how to laod data into repository
+### how to laod data into repository (h2 JPA)
 
 sql data types can be defined in JPA (TEXT, VARCHAR....)
 > use sql script in resource folder to load data
 > or use postConstruct to load data in @Service modules.
+
+### The common way to load data inside JPA
+
+> define entity
+> define id, generated value
+> define columns, and one to many, many to one relationships
+
+### Hooking up to a production database
+
+> hooking up the url, and the password to e.g. Azure sql database
+
+### The Spring Data JDBC as a lite version of JPA
+
+> JPA too heavy.
+> so PostRepository no longer extending CRUDRepository
+
+### Spring Data NoSQL with Mango DB
+
+> not using h2 anymore
+> spring.data.mangodb.database = spring-boot-intro
+> add maven mangoDB dependency
+> remove jPA annotations entity..
+> keep the crud repositoy interface
+
+### Spring Data Custom Query
+
+> look to spring data jpa [document](https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#reference)
+> jpa.query-methods-query-creation.
+> you can use @Query to create queries based on HQL
+> you can create NativeSQL queries.
+> All queries should happen inside PostRepository.
